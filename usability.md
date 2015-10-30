@@ -1,0 +1,5 @@
+- have colons at the end of the labels
+- correct types of input fieldset
+- did not create new input field
+- has a submit form button and a reset form button
+- added a required attribute 

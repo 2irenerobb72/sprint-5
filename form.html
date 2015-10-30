@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Contact Form</title>
+  <link rel="stylesheet" media="screen" href="style.css" >
+    <style>
+    *:focus {putline: none;}
+
+    :-moz-placeholder {
+      color: blue;
+    }
+
+    ::-webkit-input-placeholder {
+      color: blue;
+    }
+
+    contact_form ul {
+      width: 750px;
+      list-style-type: none;
+      list-style-position: outside;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .contact_form li {
+      padding: 12px
+      border-bottom: 1px solid #eee;
+      position: relative;
+    }
+
+    .contact_form li:first-child,
+    .contact_form li:last-child {
+      border-bottom: 1px solid #777;
+    }
+    .contact_form h2 {
+      margin: 0;
+      display: inline;
+    }
+
+    .required_notification {
+      color: #d45252;
+      margin: 5px 0 0 0;
+      display: inline;
+      float: right;
+    }
+
+    .contact_form label {
+      width: 150px;
+      margin-top: 3px;
+      display: inline-block;
+      float: left;
+      padding: 3px;
+    }
+
+    .contact_form input {
+      height: 20px;
+      width: 220px;
+      padding: 5px 8px;
+    }
+
+    .contact_form textarea {
+      padding: 8px;
+      width: 300px;
+    }
+
+    .contact_form button {margin-left: 156px;}
+
+    .contact_form input,
+    .contact_form textare {
+      border: 1px solid #aaa;
+      box-shadow: 0px 0px 3px #ccc 0 10px 15px #eee inset;
+      border-radius: 2px;
+    }
+
+    .contact_form input:focus,
+    .contact_form textarea:focus {
+      background: #fff;
+      border: 1px solid #555;
+      box-shadow: 0 0 3px #aaa;
+    }
+    </style>
+</head>
+<body>
+  <form class="contact_form" action"" method="post" name="contact_form">
+  <ul>
+    <fieldset>
+      <li>
+        <h2>Contact Us</h2>
+        <span class="required_notification">
+        </li>
+    </fieldset>
+    <fieldset>
+      <li>
+        <label for="id">Name:</label>
+        <input type="text" id="id" placeholder="John Doe">
+      </li>
+    </fieldset>
+    <fieldset>
+      <li>
+        <label for="id">Email:</label>
+        <input type="text" id="id" placeholder="john_doe@something.com" required >
+        <span class="form_hint">Proper format "example@example.com"</span>
+      </li>
+    </fieldset>
+    <fieldset>
+      <li>
+        <label for="id">Website:</label>
+        <input type="text" id="id" placeholder="http://example.com/" required>
+        <span class="form_hint">Proper format "http://someaddress.com/">
+        </li>
+    </fieldset>
+    <fieldset>
+      <li>
+        <label for="id">Message:</label>
+        <textarea id="id" cols="40" rows="6"></textarea>
+      </li>
+    </fieldset>
+    <fieldset>
+      <li>
+        <input id="way-cool-button" type="submit" name="submit" value="Submit Search">
+        <input type="reset" name="reset" value="Reset">
+        <button>Activate</button>
+      </li>
+    </fieldset>
+  </ul>
+</form>
+  <form id="catch-it">
+    <input id="some-text">
+    <input type="submit">
+    <p id="outputter">
+  </form>
+  <script>
+    var form = document.querySelector('#catch-it')
+    var input = document.querySelector('#some-text')
+    var output = document.querySelector('#outputter')
+    var updater = function (e) {
+      e.preventDefault()
+      output.innerHTML = 'Submitting form with "' + input.value + '"'
+    }
+    form.addEventListener('submit', updater, false)
+  </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+- I don't have more that one label for multiple form elements.
+- I added a </textarea> to my textarea for my message textarea.
+- added fieldsets
+- added better a button submit 
